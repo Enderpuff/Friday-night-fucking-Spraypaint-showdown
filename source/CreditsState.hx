@@ -42,6 +42,8 @@ class CreditsState extends MusicBeatState
 
 		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		add(bg);
+
+		bg.scale.x = bg.scale.y = scaleRatio;
 		bg.screenCenter();
 		
 		grpOptions = new FlxTypedGroup<Alphabet>();
