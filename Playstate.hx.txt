@@ -1,0 +1,69 @@
+//Camera move lol
+	if (!ClientPrefs.lowQuality)
+		{	
+			if (!SONG.notes[Math.floor(curStep / 16)].mustHitSection)
+			{
+				switch (dad.animation.curAnim.name)
+				{
+					case 'singLEFT': 
+						camFollow.x = xx-ofs;
+					case 'singRIGHT': 
+						camFollow.x = xx+ofs;
+					case 'singUP': 
+						   camFollow.y = yy-ofs; 
+					case 'singDOWN': 
+						camFollow.y = yy+ofs;
+					case 'singLEFT-alt': 
+						camFollow.x = xx-ofs;
+					case 'singRIGHT-alt': 
+						camFollow.x = xx+ofs;
+					case 'singUP-alt': 
+						camFollow.y = yy-ofs; 
+					case 'singDOWN-alt': 
+						camFollow.y = yy+ofs;
+					case 'idle':
+						boyfriend.cameraPosition[1];
+					case 'idle-alt':
+						boyfriend.cameraPosition[1];
+				}	
+			}
+			else
+			{
+				switch (boyfriend.animation.curAnim.name)
+        		{
+            		case 'singLEFT': 
+            	    	camFollow.x = xx2-ofs;
+        			case 'singRIGHT': 
+            		camFollow.x = xx2+ofs;
+	    			case 'singUP': 
+    	       	    	camFollow.y = yy2-ofs; 
+        			case 'singDOWN': 
+            	    	camFollow.y = yy2+ofs;
+					case 'singLEFT-alt': 
+						camFollow.x = xx2-ofs;
+					case 'singRIGHT-alt': 
+						camFollow.x = xx2+ofs;
+					case 'singUP-alt': 
+						camFollow.y = yy2-ofs; 
+					case 'singDOWN-alt': 
+						camFollow.y = yy2+ofs;
+					case 'idle':
+						boyfriend.cameraPosition[0];
+					case 'idle-alt':
+						boyfriend.cameraPosition[0];
+				}
+			}
+		}
+//Week hewk
+			case 'hawkbg': //Week hewk
+				var hawkbg:BGSprite = new BGSprite('hawkbg', -600, -200, 0.9, 0.9);
+				add(hawkbg);
+//Dialogue shit for hawk week
+				case 'storm' | 'thunder':
+					startDialogue(dialogueJson);
+//Vars for camera
+	var xx:Float = 420.95;
+	var yy:Float = 420;
+	var xx2:Float = 732.9;
+	var yy2:Float = 450;
+	var ofs:Float = 75;

@@ -1,0 +1,74 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.05,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "Skull n Hawk",
+			"text": "And so, I said to felix--"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "boyfriend",
+			"boxState": "normal",
+			"expression": "cool",
+			"text": "Beep!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "dumb",
+			"text": "Wh--"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "Happy",
+			"text": "Oh, hey little dude! Whats up?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "boyfriend",
+			"boxState": "normal",
+			"expression": "peace",
+			"text": "Beep bop!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Rap battle?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "boyfriend",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Beep bep!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "You know what?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "Happy",
+			"text": "Sure! Why not?"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "Embarassed",
+			"text": "I'm down for an song or two :)"
+		}
+	]
+}

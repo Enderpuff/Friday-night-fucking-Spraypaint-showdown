@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BOYFRIEND.png">
+	<!-- Created with Adobe Animate version 21.0.5.40714 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bf cool0000" x="0" y="0" width="717" height="591"/>
+	<SubTexture name="bf cool0001" x="717" y="0" width="717" height="591"/>
+	<SubTexture name="bf cool0002" x="1434" y="0" width="717" height="591"/>
+	<SubTexture name="bf cool0003" x="2151" y="0" width="717" height="591"/>
+	<SubTexture name="bf default0000" x="2868" y="0" width="717" height="591"/>
+	<SubTexture name="bf default0001" x="0" y="591" width="717" height="591"/>
+	<SubTexture name="bf default0002" x="717" y="591" width="717" height="591"/>
+	<SubTexture name="bf default0003" x="1434" y="591" width="717" height="591"/>
+	<SubTexture name="bf dumb0000" x="2151" y="591" width="717" height="591"/>
+	<SubTexture name="bf dumb0001" x="2868" y="591" width="717" height="591"/>
+	<SubTexture name="bf dumb0002" x="0" y="1182" width="717" height="591"/>
+	<SubTexture name="bf dumb0003" x="717" y="1182" width="717" height="591"/>
+	<SubTexture name="bf stressed0000" x="1434" y="1182" width="717" height="591"/>
+	<SubTexture name="bf stressed0001" x="2151" y="1182" width="717" height="591"/>
+	<SubTexture name="bf stressed0002" x="2868" y="1182" width="717" height="591"/>
+	<SubTexture name="bf stressed0003" x="0" y="1773" width="717" height="591"/>
+	<SubTexture name="peace bf0000" x="717" y="1773" width="717" height="591"/>
+	<SubTexture name="peace bf0001" x="1434" y="1773" width="717" height="591"/>
+	<SubTexture name="peace bf0002" x="2151" y="1773" width="717" height="591"/>
+	<SubTexture name="peace bf0003" x="2868" y="1773" width="717" height="591"/>
+	<SubTexture name="stressedbf4.png" x="0" y="1773" width="717" height="591"/>
+</TextureAtlas>

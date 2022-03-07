@@ -1,0 +1,141 @@
+{
+	"position": [
+		0,
+		-70
+	],
+	"dialogue_pos": "left",
+	"scale": 1.25,
+	"image": "HAWK DIALOGUE",
+	"animations": [
+		{
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_offsets": [
+				0,
+				1
+			],
+			"anim": "talk",
+			"idle_name": "Hawk default0003",
+			"loop_name": "Hawk default"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "dumb",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Hawk dumb",
+			"idle_name": "Hawk dumb0003"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "Embarassed",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Hawk embarassed",
+			"idle_name": "Hawk embarassed0003"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "Excited",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Hawk excited",
+			"idle_name": "Hawk excited0003"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "Happy",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Hawk happy",
+			"idle_name": "Hawk happy0003"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "Mad",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Hawk mad",
+			"idle_name": "Hawk mad0003"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "Skull n Hawk",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "SkullnHawk",
+			"idle_name": "SkullnHawk0003"
+		},
+		{
+			"loop_offsets": [
+				0,
+				0
+			],
+			"anim": "Skullz",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "Skullz",
+			"idle_name": "Skullz0003"
+		},
+		{
+			"loop_name": "Charged hawk",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Charged hawk0003",
+			"anim": "Charged",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "Charged down",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "Charged down0003",
+			"anim": "Charged down",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	]
+}

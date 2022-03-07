@@ -1,0 +1,157 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				32,
+				-72
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "man down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				56,
+				4
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "man left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-32,
+				-11
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "man right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "man",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "man",
+			"indices": [
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-9,
+				10
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "man left",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				27
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "man right",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				-6,
+				50
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "man up",
+			"indices": [
+				56,
+				57,
+				58,
+				59
+			]
+		},
+		{
+			"loop": true,
+			"offsets": [
+				11,
+				40
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "man up",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/hawk",
+	"position": [
+		40,
+		110
+	],
+	"healthicon": "hawk",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		207,
+		111
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

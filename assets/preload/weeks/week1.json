@@ -1,22 +1,48 @@
 {
 	"songs": [
-		["Bopeebo", "dad", [146, 113, 253]],
-		["Fresh", "dad", [146, 113, 253]],
-		["Dad Battle", "dad", [146, 113, 253]]
+		[
+			"storm",
+			"hawk",
+			[
+				255,
+				207,
+				111
+			]
+		],
+		[
+			"thunder",
+			"hawk",
+			[
+				255,
+				207,
+				111
+			]
+		],
+		[
+			"jolted",
+			"charged",
+			[
+				235,
+				187,
+				91
+			]
+		]
 	],
-
+	"hideFreeplay": false,
+	"weekBackground": "hawk",
 	"weekCharacters": [
-		"dad",
-		"bf",
-		"gf"
+		"",
+		"",
+		""
 	],
-	"weekBackground": "stage",
-
-	"storyName": "Daddy Dearest",
-	"weekBefore": "tutorial",
-	"weekName": "Week 1",
-	"startUnlocked": true,
-
+	"storyName": "hawk was here",
+	"weekName": "Custom Week",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekBefore": "tutorial",
+	"startUnlocked": true
 }

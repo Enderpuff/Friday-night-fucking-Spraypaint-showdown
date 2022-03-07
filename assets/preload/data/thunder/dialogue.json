@@ -1,0 +1,32 @@
+{
+	"dialogue": [
+		{
+			"speed": 0.04,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "Excited",
+			"text": "That first song wasn’t my best, so let’s kick it up a notch."
+		},
+		{
+			"speed": 0.05,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "Skullz",
+			"text": "Maybe you just suck!!"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "boyfriend",
+			"boxState": "normal",
+			"expression": "dumb",
+			"text": "Ba--"
+		},
+		{
+			"speed": 0.05,
+			"portrait": "hawk",
+			"boxState": "normal",
+			"expression": "Mad",
+			"text": "Just play the next track already."
+		}
+	]
+}

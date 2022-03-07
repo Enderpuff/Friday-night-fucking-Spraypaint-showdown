@@ -16,7 +16,7 @@ class GalleryState extends MusicBeatState
     var difficultySelectors = new FlxGroup();
     var selected:Int = 0;
     var leftar:FlxSprite = new FlxSprite(0, 0);
-    var rightar:FlxSprite = new FlxSprite(0, 0);
+    var rightar:FlxSprite;
     var hawk1:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('fanart/hawk1'));
     var hawk2:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('fanart/hawk2'));
     var hawk3:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('fanart/hawk3'));
@@ -46,13 +46,16 @@ class GalleryState extends MusicBeatState
 
 		add(difficultySelectors);
 
+        leftar.x += 270;
+        leftar.y = 250;
         leftar.frames = Paths.getSparrowAtlas('campaign_menu_UI_assets');
         leftar.animation.addByPrefix('idle', "arrow left");
 		leftar.animation.addByPrefix('press', "arrow push left");
 		leftar.animation.play('idle');
 		leftar.antialiasing = ClientPrefs.globalAntialiasing;
         difficultySelectors.add(leftar);
-
+        
+        rightar = new FlxSprite(leftar.x + 700, leftar.y);
         rightar.frames = Paths.getSparrowAtlas('campaign_menu_UI_assets');
         rightar.animation.addByPrefix('idle', "arrow right");
 		rightar.animation.addByPrefix('press', "arrow push right");
@@ -92,55 +95,81 @@ class GalleryState extends MusicBeatState
     }
     override function update(elapsed:Float)
     {
-        if (selected == 0)
+        switch (selected)
         {
-            hawk1.visible = true;
+            case 0:
+                hawk5.visible = false;
+                hawk1.visible = true;
+                hawk2.visible = false;
+                hawk4.visible = false;
+                hawk3.visible = false;
+            case 1:
+                hawk2.visible = true;
+                hawk1.visible = false;
+                hawk3.visible = false;
+                hawk4.visible = false;
+                hawk5.visible = false;
+            case 2:
+                hawk2.visible = false;
+                hawk5.visible = false;
+                hawk1.visible = false;
+                hawk3.visible = true;
+                hawk4.visible = false;
+            case 3:
+                hawk2.visible = false;
+                hawk5.visible = false;
+                hawk1.visible = false;
+                hawk3.visible = false;
+                hawk4.visible = true;
+                hawk5.visible = false;
+            case 4:
+                hawk2.visible = false;
+                hawk1.visible = false;
+                hawk4.visible = false;
+                hawk3.visible = false;
+                hawk5.visible = true;
+                hawk1.visible = false;
+            
         }
-        else
+        function changeSelection(change:Int = 0)
         {
-            hawk1.visible = false;
+            selected += change;
+
+            if (selected >= 4)
+            {
+                selected = 0;
+            }
+            if (selected == -1)
+            {
+                selected = 4;
+            }
         }
-        if (selected == 1)
-        {
-            hawk2.visible = true;
-        }
-        else
-        {
-            hawk2.visible = false;
-        }
-        if (selected == 2)
-        {
-            hawk3.visible = true;
-        }
-        else
-        {
-            hawk3.visible = false;
-        }
-        if (selected == 3)
-        {
-            hawk4.visible = true;
-        }
-        else
-        {
-            hawk4.visible = false;
-        }
-        if (selected == 4)
-        {
-            hawk5.visible = true;
-        }
-        else
-        {
-            hawk5.visible = false;
-        }
+
         if (FlxG.keys.anyJustPressed([LEFT, A]))
         {
-            selected -=1;
+            changeSelection(-1);
             FlxG.sound.play(Paths.sound('scrollMenu'));
         }
         if (FlxG.keys.anyJustPressed([RIGHT, D]))
         {
-            selected +=1;
+            changeSelection(1);
             FlxG.sound.play(Paths.sound('scrollMenu'));
+        }
+        if (FlxG.keys.anyPressed([LEFT, A]))
+        {
+            leftar.animation.play('press');
+        }
+        else
+        {
+            leftar.animation.play('idle');
+        }
+        if (FlxG.keys.anyPressed([RIGHT, D]))
+        {
+            rightar.animation.play('press');
+        }        
+        else
+        {
+            rightar.animation.play('idle');
         }
         if (FlxG.keys.justPressed.BACKSPACE)
         {

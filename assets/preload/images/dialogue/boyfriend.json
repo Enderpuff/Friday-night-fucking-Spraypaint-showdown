@@ -1,0 +1,76 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		20,
+		-160
+	],
+	"scale": 1.25,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "bf default",
+			"idle_name": "bf default0003"
+		},
+		{
+			"loop_name": "bf cool",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "bf cool0003",
+			"anim": "cool",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "bf dumb",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "bf dumb0003",
+			"anim": "dumb",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "bf stressed",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "bf stressed0003",
+			"anim": "stressed",
+			"loop_offsets": [
+				0,
+				0
+			]
+		},
+		{
+			"loop_name": "peace bf",
+			"idle_offsets": [
+				0,
+				0
+			],
+			"idle_name": "peace bf0003",
+			"anim": "peace",
+			"loop_offsets": [
+				0,
+				0
+			]
+		}
+	],
+	"image": "BF DIALOGUE"
+}

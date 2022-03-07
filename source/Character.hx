@@ -1,9 +1,7 @@
 package;
 
-import animateatlas.AtlasFrameMaker;
 import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.addons.effects.FlxTrail;
 import flixel.animation.FlxBaseAnimation;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.tweens.FlxTween;
@@ -13,7 +11,6 @@ import Section.SwagSection;
 import sys.io.File;
 import sys.FileSystem;
 #end
-import openfl.utils.AssetType;
 import openfl.utils.Assets;
 import haxe.Json;
 import haxe.format.JsonParser;
@@ -61,7 +58,6 @@ class Character extends FlxSprite
 	public var singDuration:Float = 4; //Multiplier of how long a character holds the sing pose
 	public var idleSuffix:String = '';
 	public var danceIdle:Bool = false; //Character use "danceLeft" and "danceRight" instead of "idle"
-	
 
 	public var healthIcon:String = 'face';
 	public var animationsArray:Array<AnimArray> = [];
@@ -69,14 +65,13 @@ class Character extends FlxSprite
 	public var positionArray:Array<Float> = [0, 0];
 	public var cameraPosition:Array<Float> = [0, 0];
 
-	public var hasMissAnimations:Bool = false;
-
 	//Used on Character Editor
 	public var imageFile:String = '';
 	public var jsonScale:Float = 1;
 	public var noAntialiasing:Bool = false;
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
+	public var alreadyLoaded:Bool = true; //Used by "Change Character" event
 
 	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
 	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
@@ -91,27 +86,21 @@ class Character extends FlxSprite
 		curCharacter = character;
 		this.isPlayer = isPlayer;
 		antialiasing = ClientPrefs.globalAntialiasing;
+
 		var library:String = null;
 		switch (curCharacter)
 		{
-			//case 'your character name in case you want to hardcode them instead':
+			//case 'your character name in case you want to hardcode him instead':
 
 			default:
 				var characterPath:String = 'characters/' + curCharacter + '.json';
 				#if MODS_ALLOWED
-				
-				
-				
-				
 				var path:String = Paths.modFolders(characterPath);
 				if (!FileSystem.exists(path)) {
 					path = Paths.getPreloadPath(characterPath);
 				}
 
 				if (!FileSystem.exists(path))
-				
-				
-				
 				#else
 				var path:String = Paths.getPreloadPath(characterPath);
 				if (!Assets.exists(path))
@@ -127,64 +116,11 @@ class Character extends FlxSprite
 				#end
 
 				var json:CharacterFile = cast Json.parse(rawJson);
-				var spriteType = "sparrow";
-				//sparrow
-				//packer
-				//texture
-				#if MODS_ALLOWED
-				var modTxtToFind:String = Paths.modsTxt(json.image);
-				var txtToFind:String = Paths.getPath('images/' + json.image + '.txt', TEXT);
-				
-				//var modTextureToFind:String = Paths.modFolders("images/"+json.image);
-				//var textureToFind:String = Paths.getPath('images/' + json.image, new AssetType();
-				
-				if (FileSystem.exists(modTxtToFind) || FileSystem.exists(txtToFind) || Assets.exists(txtToFind))
-				#else
-				if (Assets.exists(Paths.getPath('images/' + json.image + '.txt', TEXT)))
-				#end
-				{
-					
-					spriteType = "packer";
-					
+				if(Assets.exists(Paths.getPath('images/' + json.image + '.txt', TEXT))) {
+					frames = Paths.getPackerAtlas(json.image);
+				} else {
+					frames = Paths.getSparrowAtlas(json.image);
 				}
-				
-				
-				
-				
-				#if MODS_ALLOWED
-				var modAnimToFind:String = Paths.modFolders('images/' + json.image + '/Animation.json');
-				var animToFind:String = Paths.getPath('images/' + json.image + '/Animation.json', TEXT);
-				
-				//var modTextureToFind:String = Paths.modFolders("images/"+json.image);
-				//var textureToFind:String = Paths.getPath('images/' + json.image, new AssetType();
-				
-				if (FileSystem.exists(modAnimToFind) || FileSystem.exists(animToFind) || Assets.exists(animToFind))
-				#else
-				if (Assets.exists(Paths.getPath('images/' + json.image + '/Animation.json', TEXT)))
-				#end
-				{
-					
-					spriteType = "texture";
-					
-				}
-				
-				
-				
-				
-				switch (spriteType){
-					
-					case "packer":
-						frames = Paths.getPackerAtlas(json.image);
-					
-					case "sparrow":
-						frames = Paths.getSparrowAtlas(json.image);
-					
-					case "texture":
-						frames = AtlasFrameMaker.construct(json.image);
-						
-						
-				}
-				
 				imageFile = json.image;
 
 				if(json.scale != 1) {
@@ -235,7 +171,6 @@ class Character extends FlxSprite
 		}
 		originalFlipX = flipX;
 
-		if(animOffsets.exists('singLEFTmiss') || animOffsets.exists('singDOWNmiss') || animOffsets.exists('singUPmiss') || animOffsets.exists('singRIGHTmiss')) hasMissAnimations = true;
 		recalculateDanceIdle();
 		dance();
 
